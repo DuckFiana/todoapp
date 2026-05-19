@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>To-Do App</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f5f5f5; }
+        h1 { color: #333; }
+        a { display: inline-block; margin: 10px; padding: 10px 20px;
+            background-color: #4CAF50; color: white; text-decoration: none; border-radius: 5px; }
+        a:hover { background-color: #45a049; }
+    </style>
+</head>
+<body>
+<h1>Willkommen bei der To-Do App</h1>
+<p>Was möchtest du verwalten?</p>
+<a th:href="@{/aufgaben}">Aufgaben</a>
+<a th:href="@{/kategorien}">Kategorien</a>
+</body>
+</html>
