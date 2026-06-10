@@ -33,6 +33,9 @@ public class TaskService {
     }
 
     public void speichern(Task task) {
+        if (task.getTitel() != null) {
+            task.setTitel(task.getTitel().trim());
+        }
         taskRepository.save(task);
     }
 
