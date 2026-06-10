@@ -29,6 +29,10 @@ public class CategoryService {
     }
 
     public void speichern(Category category) {
+        if (category.getName() == null || category.getName().isBlank()) {
+            logger.warn("Kategoriename darf nicht leer sein.");
+            return;
+        }
         if (categoryRepository.existsByName(category.getName())) {
             logger.warn("Kategorie mit Name '{}' existiert bereits.", category.getName());
             return;
